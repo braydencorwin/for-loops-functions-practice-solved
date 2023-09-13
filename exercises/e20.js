@@ -9,18 +9,27 @@ export function separateNamesWithAFromRest(array) {
   // Your code goes here...
   let arr1 = []
   let arr2= []
-  let finalArr=[]
+  let finalArr = []
 for(let i =0; i<array.length; i++){
-  if(array[i].match('a')){
-    arr1.push(array[i])
-  }else{
+  let letters = array[i].split('')
+  let hasA = false
+  for(let l = 0; l< letters.length; l++){
+    if (letters[l] === 'a'){
+      arr1.push(array[i])
+      hasA = true
+    }
+  }
+  if(!hasA){
     arr2.push(array[i])
   }
 }
+  
 finalArr.push(arr1)
 finalArr.push(arr2)
 return finalArr
 }
+
+
 
 
 // === TEST YOURSELF ===

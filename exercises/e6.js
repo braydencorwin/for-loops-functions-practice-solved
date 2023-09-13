@@ -8,8 +8,8 @@ export function getClientWithNoMoney(array) {
   let broke = [];
   
   for(let i=0; i< array.length; i++){
-    if(array[i]['balance']==0 ){
-      broke.push(array[i]['name'])
+    if(array[i].balance==0 ){
+      broke.push(array[i].name)
     }
     
   }
