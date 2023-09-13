@@ -10,7 +10,11 @@
 
 export function getAverage(array) {
   // Your code goes here...
-
+  let total = 0;
+  for(let i = 0; i<array.length; i++){
+     total += array[i]
+   }
+   return total/array.length
 }
 
 
@@ -23,7 +27,22 @@ export function getAverage(array) {
 
 export function getStringSum(str) {
   // Your code goes here...
-
+  let strArr = str.split('');
+  let numArr= [];
+  for(let i = 0; i<strArr.length; i++){
+    if(/\d+/g.test(strArr[i])){
+      numArr.push(strArr[i])
+    }
+  }
+  let total = 0;
+  if(str.match(/\d+/g)){
+    for(let i = 0; i<numArr.length; i++){
+      total += parseInt(numArr[i]);
+  }
+  }
+  
+return total;
+  
 }
 
 
